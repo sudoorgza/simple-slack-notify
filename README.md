@@ -4,15 +4,16 @@
 
 Slack notification action that just works
 
-## No longer maintained
+## Note
 
-Please note that this project is no longer maintained, and has been archived.
+This is a fork from https://github.com/adamkdean/simple-slack-notify which is no longer maintained in order to update the action to node16.
 
 ## Introduction
 
 We've attempted to use a few of the Slack notification actions that are currently available, but they all seem to have limitations or be quite verbose, so we set out to create a simple yet effective action that just does what you need and nothing else. In the examples below, we'll show a few different variations of how the action could be used.
 
 The main features are:
+
 - Status based messages meaning one step handles job successes, failures, and cancellations
 - JavaScript strings for embedding environment variables or custom logic into notification strings
 - Easy to add fields based on standard Slack JSON inputs
@@ -132,7 +133,6 @@ Now, each job has a status, which can be `success`, `failed`, or `cancelled`. Mo
 
 There are likely other ways you can use this action, so please submit a pull request if you want to add your useful example to this list. I hope this is as useful for you as it is for me.
 
-
 ### Extracting GitHub branch
 
 Note: the `BRANCH` variable isn't standard. To get that, use the following:
@@ -161,18 +161,18 @@ So for a field you'd have:
 
 ## Inputs
 
-| Input | Details | Example/possible values |
-|:------|:--------|:------------------------|
-| cancelled_text | The message to send if status is cancelled | |
-| channel | The channel you want to send to | #general |
-| color | The color you want to use | "good", "danger", "warning" or a hex code |
-| disable_eval | Disable JS string evaluation. False by default | false |
-| failure_text | The message to send if status is failure | |
-| fields | JSON string containing an array of fields to attach to the notification | |
-| status | Pass the job status through and omit color for status based color | |
-| success_text | The message to send if status is success | |
-| text | The message that you want to send regardless of status | |
-| username | Used to override the default username | |
+| Input          | Details                                                                 | Example/possible values                   |
+| :------------- | :---------------------------------------------------------------------- | :---------------------------------------- |
+| cancelled_text | The message to send if status is cancelled                              |                                           |
+| channel        | The channel you want to send to                                         | #general                                  |
+| color          | The color you want to use                                               | "good", "danger", "warning" or a hex code |
+| disable_eval   | Disable JS string evaluation. False by default                          | false                                     |
+| failure_text   | The message to send if status is failure                                |                                           |
+| fields         | JSON string containing an array of fields to attach to the notification |                                           |
+| status         | Pass the job status through and omit color for status based color       |                                           |
+| success_text   | The message to send if status is success                                |                                           |
+| text           | The message that you want to send regardless of status                  |                                           |
+| username       | Used to override the default username                                   |                                           |
 
 ## License
 
